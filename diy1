@@ -1,0 +1,9 @@
+import jieba
+
+filename = input("请输入文件名")
+open_file = open(filename)
+read_file = open_file.read()
+print(f"以下是文本内容:\n{read_file}")
+fenci = jieba.cut(read_file)
+print("Full Mode: " + "/ ".join(fenci))
+open_file.close()
